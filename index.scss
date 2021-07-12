@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.1rem;
+    background-color: hsl(240, 67%, 8%);
+   }
+
+h1 {
+    font-size: 150%;
+    
+}
+
+.header {
+    font-size: 200%;
+    letter-spacing: .1em;
+   max-width: 600px;
+   margin: 0 auto;
+    position: relative;
+    font-weight: bolder;
+    text-align: center;
+    color:rgba(243, 200, 229, 0.856);
+}
+
+.container {
+    width: 100%;
+
+
+.carousel {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+
+    .carousel-item,
+    .carousel-item-hidden {
+        display: none;
+    }
+
+    .carousel-item-visible {
+        display: block;
+        animation: fadeVisibility 0.5s;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .carousel-actions {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        button {
+            border-radius: 50px;
+            border: 0;
+            font-size: 5rem;
+            font-weight: 900;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: unset;
+            color: greenyellow;
+
+            #carousel-button-prev {
+                margin-left: 20px;
+            }
+            
+            #carousel-button-next {
+                margin-right: 20px;   
+            }
+        }
+                
+    }
+
+    #radio-btn-wrapper {
+            
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      
+                    
+        
+        .radio-buttons {
+            border: 2px solid #00ff00;
+            margin: 2em;
+            border-radius: 20px;
+            width: 20px;
+            cursor: pointer;
+            transition: 1s;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+}
+
+
+    }
+
+}
+
+    
+}
+
+
+/* css for slide navigation */
+	
+
+	
+		.navigation-btn:not(:last-child) {
+			margin-right: 40px;
+		}
+
+		.navigation-btn:hover {
+			background: #0000ff;
+		}
+
+/* The checked attribute is used with
+		reference to <input type="radio">,
+		when radio button is clicked the
+		class will shift w.r.t left margin
+		as mentioned which results in image
+		slider */
+		#radio1:checked~.first {
+			margin-left: 0;
+		}
+
+		#radio2:checked~.second {
+			margin-left: -20%;
+		}
+
+		#radio3:checked~.first {
+			margin-left: -40%;
+		}
+
+		#radio4:checked~.first {
+			margin-left: -60%;
+		}
+
+		#radio5:checked~.first {
+			margin-left: -80%;
+		}
+
+
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+ @media only screen and (max-width: 320px) {
+        .container {
+                width: 90%;
+                margin: 0 auto;
+        } 
+    
+        .imgs_slides {
+            width: 100%;
+            height: 70%
+        }
+}
+
+
+
+
+@media only screen and (min-width: 720px) {
+    .container {
+            width: 100%;
+            margin: 0 auto;
+    } 
+
+    .imgs_slides {
+        width: 100%;
+        height: 80%
+    }
+}
